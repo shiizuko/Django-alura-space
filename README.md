@@ -114,3 +114,5 @@ INSTALLED_APPS = [
         'galeria', <-- o app que acabamos de criar!
 ~~~
 
+# Instrutor
+[Guilherme Lima](https://cursos.alura.com.br/user/guilhermelima)
