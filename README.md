@@ -66,6 +66,11 @@ Django-admin startproject setup .
 ~~~
 <small>Será criado uma pasta chamada "setup", dentro de "alura-space" , com as configurações do projeto</small>
 
+~~~
+pip install -r requirements.txt
+~~~
+<small> o pip garante a instalação de todos os pacotes e módulos incluídos no arquivo "requirements.txt".</small>
+
 ## manage.py
 Responsável por realizar a maioria dos comandos que utilizaremos para o desenvolvimento de aplicações Django e também por subir servidores.
  <br />
