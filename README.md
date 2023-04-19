@@ -10,6 +10,9 @@
 ## IDE
 Vscode
 
+## Extensões 
+SQlite Viewer - [Florian Klampfer](https://qwtel.com/)
+
 ## Linguagem
 Python **3.10.9**
 
@@ -120,6 +123,12 @@ INSTALLED_APPS = [
         'django.contrib.staticfiles',
         'galeria', <-- o app que acabamos de criar!
 ~~~
-
+# Persistência de dados e Admin
+> Django ORM --> O Django traduz uma classe para uma tabela no banco de dados - Bruno Divino
+~~~
+python manage.py makemigrations
+python manage.py migrate
+~~~
+<small>Com o (.venv)</small>
 # Instrutor
 [Guilherme Lima](https://cursos.alura.com.br/user/guilhermelima) e [Bruno Divino](https://github.com/BrunoDivino)
