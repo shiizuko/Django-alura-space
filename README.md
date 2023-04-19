@@ -130,5 +130,27 @@ python manage.py makemigrations
 python manage.py migrate
 ~~~
 <small>Com o (.venv)</small>
+## Criando Dados
+Para adicionar um item 
+~~~
+python manage.py shell 
+~~~
+Para importar photography 
+~~~
+from galeria.models import photography
+~~~
+Após importar, a criação do dado:
+~~~
+picture = photography(name="NOME_DA_FOTOGRAFIA, legend="LEGENDA_DA_FOTOGRAFIA")
+~~~
+Para salvar
+~~~
+picture.save() 
+~~~
+Exibir os objetos criados no <i>model</i> de photography
+~~~
+photography.objects.all() 
+~~~
+
 # Instrutor
 [Guilherme Lima](https://cursos.alura.com.br/user/guilhermelima) e [Bruno Divino](https://github.com/BrunoDivino)
