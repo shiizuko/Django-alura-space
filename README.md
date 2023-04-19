@@ -1,4 +1,6 @@
 ﻿# Django - Criando aplicações em python 
+ ![Captura de tela do projeto](https://user-images.githubusercontent.com/87834766/232917971-0f965099-500e-4b26-b8b3-a339a0dce898.png)
+
  ### Templates e Boas Práticas
 ## Alura-Space
 > O Django é uma ótima ferramenta para fazer front-end e back-end trabalharem em sintonia.
