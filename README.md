@@ -122,4 +122,4 @@ INSTALLED_APPS = [
 ~~~
 
 # Instrutor
-[Guilherme Lima](https://cursos.alura.com.br/user/guilhermelima)
+[Guilherme Lima](https://cursos.alura.com.br/user/guilhermelima) e [Bruno Divino](https://github.com/BrunoDivino)
