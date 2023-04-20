@@ -8,7 +8,7 @@ urlpatterns = [
     path('', 
          index,
          name='index'),
-    path('imagem/',
+    path('imagem/<int:picture_id>',
           imagem, 
           name='imagem'),
     path('admin/',

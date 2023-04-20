@@ -24,14 +24,14 @@
                     {% if cards %}
                     {% for photography in cards %}
                             <li class="card">
-                                <a href="{% url 'imagem' %}">
+                                <a href="{% url 'imagem' photography.id %}">
                                     <img class="card__imagem" src="{% static '/assets/imagens/galeria/'%}{{photography.picture}}" alt="foto">
                                 </a>
                                 <span class="card__tag">Estrelas</span>
                                 <div class="card__info">
                                     <p class="card__titulo">{{photography.name}}</p>
                                     <div class="card__texto">
-                                        <p class="card__descricao">{{photography.lengend}}e</p>
+                                        <p class="card__descricao">{{photography.legend}}e</p>
                                         <span>
                                             <img src="{% static '/assets/ícones/1x/favorite_outline.png'%}" alt="ícone de coração">
                                         </span>

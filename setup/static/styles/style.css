@@ -142,10 +142,12 @@ table {
     margin-bottom: 1.5rem;
     position: relative;
     width: 450px;
+  
 }
 
 .card__imagem {
     width: 450px;
+    height: 350px !important;
     border-radius: 10px 10px 0 0;
 }
 

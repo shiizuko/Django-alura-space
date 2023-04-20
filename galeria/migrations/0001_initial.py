@@ -10,7 +10,7 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name="Photography",
+            name="photography",
             fields=[
                 (
                     "id",
@@ -22,7 +22,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
                 ("name", models.CharField(max_length=100)),
-                ("legend", models.CharField(max_length=150)),
+                ("lengend", models.CharField(max_length=150)),
                 ("description", models.TextField()),
                 ("picture", models.CharField(max_length=100)),
             ],
