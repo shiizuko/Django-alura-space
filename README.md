@@ -151,6 +151,11 @@ Exibir os objetos criados no <i>model</i> de photography
 ~~~
 photography.objects.all() 
 ~~~
+## Criação do Administrator
+~~~
+python manage.py createsuperuser 
+~~~
+
 
 # Instrutor
 [Guilherme Lima](https://cursos.alura.com.br/user/guilhermelima) e [Bruno Divino](https://github.com/BrunoDivino)
