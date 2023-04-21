@@ -1,5 +1,5 @@
 ﻿# Django - Criando aplicações em python 
- ![Captura de tela do projeto](https://user-images.githubusercontent.com/87834766/232917971-0f965099-500e-4b26-b8b3-a339a0dce898.png)
+![Capa do projeto, com um astronauta no espaço com o texto "Alura Space Django"](https://user-images.githubusercontent.com/87834766/233518757-089582c3-7155-4b9d-809f-773d798d7f9f.png)
 
  ### Templates e Boas Práticas
 ## Alura-Space
