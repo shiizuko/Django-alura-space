@@ -15,6 +15,7 @@ class Photography(models.Model):
     category = models.CharField(max_length=100,  choices=CATEGORY_OPTIONS, default='')
     description = models.TextField(null=False, blank=False)
     picture = models.CharField(max_length=100,null=False, blank=False)
+    published = models.BooleanField(default=False)
 
 # Boa prática
 def __str__(self):
