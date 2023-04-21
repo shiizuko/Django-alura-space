@@ -1,5 +1,5 @@
+from datetime import datetime
 from django.db import models
-
 # ORM -- tradução entre o banco de dados e o python puro
 
 class Photography(models.Model):
@@ -16,6 +16,7 @@ class Photography(models.Model):
     description = models.TextField(null=False, blank=False)
     picture = models.CharField(max_length=100,null=False, blank=False)
     published = models.BooleanField(default=False)
+    date_picture = models.DateTimeField(default=datetime.now, blank=False)
 
 # Boa prática
 def __str__(self):
