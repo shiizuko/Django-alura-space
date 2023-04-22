@@ -20,4 +20,4 @@ class Photography(models.Model):
 
 # Boa prática
 def __str__(self):
-    return f"Photography [name={self.name}]"
+    return self.name
