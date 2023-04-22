@@ -11,4 +11,9 @@ def imagem(request, picture_id):
     return render(request, "galeria/imagem.html", {"photography": picture})
 
 def search(request):
-    return render(request, "galeria/search.html")
+    photographys = Photography.objects.order_by("date_picture").filter(published=True)
+    if "search" in request.GET:
+        search_name = request.GET["search"]
+        if search_name:
+            photographys = photographys.filter(name__icontains=search_name)
+    return render(request, "galeria/search.html", {"cards": photographys})

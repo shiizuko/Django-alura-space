@@ -1,1 +1,59 @@
-<h1>search...</h1>
+{% extends 'galeria/base.html' %}
+{% load static %}
+{% block content %}
+            <section class="conteudo">
+                <section class="banner">
+                    <img class="banner__imagem" src="{% static '/assets/imagens/Banner(2).png'%}" alt="banner Alura Space">
+                    <h1 class="banner__titulo"> A galeria mais completa de fotos do espaço!</h1>
+                </section>
+                <section class="tags">
+                    <p class="tags__titulo">Busque por tags:</p>
+                    <ul class="tags__lista">
+                        <li class="tags__tag">Nebulosa</li>
+                        <li class="tags__tag">Estrela</li>
+                        <li class="tags__tag">Galáxia</li>
+                        <li class="tags__tag">Planeta</li>
+                    </ul>
+                </section>
+                <section class="galeria">
+                  
+                    <div class="cards">
+                        <h2 class="cards__titulo">Navegue pela galeria</h2>
+                        <ul class="cards__lista">
+                              <!--chave e value !-->
+                    {% if cards %}
+                    {% for photography in cards %}
+                            <li class="card">
+                                <a href="{% url 'imagem' photography.id %}">
+                                {% if photography.picture == "" or photography.picture == null %}
+                                    <img class="card__imagem" src="{% static '/assets/imagens/galeria/not-found.png'%}" alt="{{photography.name}}">
+                                {% else %}
+                                    <img class="card__imagem" src="{{ photography.picture.url }}" alt="{{photography.description}}">
+                                {% endif %}
+                                </a>
+                                <span class="card__tag">{{photography.category}}</span>
+                                <div class="card__info">
+                                    <p class="card__titulo">{{photography.name}}</p>
+                                    <div class="card__texto">
+                                        <p class="card__descricao">{{photography.legend}}e</p>
+                                        <span>
+                                            <img src="{% static '/assets/ícones/1x/favorite_outline.png'%}" alt="ícone de coração">
+                                        </span>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                                {% else %}
+                                <div class="imagem__texto">
+                                    <p>Fotografias não encontradas</p>
+                                </div>
+                                {% endif %}
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </section>
+            </section>
+        </main>
+    </div>
+ 
+{% endblock %}
