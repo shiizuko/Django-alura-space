@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path
-from galeria.views import index, imagem
+from galeria.views import index, imagem, search
 
 #criando uma lista que possui todos os endpoints da aplicação relacionada a galeria:
 
@@ -13,4 +13,7 @@ urlpatterns = [
           name='imagem'),
     path('admin/',
          admin.site.urls),
+    path('search',
+         search,
+         name='search'),
 ]

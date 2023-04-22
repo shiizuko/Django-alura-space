@@ -9,3 +9,6 @@ def index(request):
 def imagem(request, picture_id):
     picture = get_object_or_404(Photography, pk=picture_id)
     return render(request, "galeria/imagem.html", {"photography": picture})
+
+def search(request):
+    return render(request, "galeria/search.html")
