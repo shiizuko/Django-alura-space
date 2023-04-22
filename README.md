@@ -158,4 +158,5 @@ python manage.py createsuperuser
 
 
 # Instrutor
-[Guilherme Lima](https://cursos.alura.com.br/user/guilhermelima) e [Bruno Divino](https://github.com/BrunoDivino)
+[Guilherme Lima](https://cursos.alura.com.br/user/guilhermelima) e [Bruno Divino](https://github.com/BrunoDivino) </br>
+![django](https://maxmautner.com/public/images/django.gif)
