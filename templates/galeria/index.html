@@ -25,7 +25,11 @@
                     {% for photography in cards %}
                             <li class="card">
                                 <a href="{% url 'imagem' photography.id %}">
-                                    <img class="card__imagem" src="{% static '/assets/imagens/galeria/'%}{{photography.picture}}" alt="foto">
+                                {% if photography.picture == "" or photography.picture == null %}
+                                    <img class="card__imagem" src="{% static '/assets/imagens/galeria/not-found.png'%}" alt="{{photography.name}}">
+                                {% else %}
+                                    <img class="card__imagem" src="{{ photography.picture.url }}" alt="{{photography.description}}">
+                                {% endif %}
                                 </a>
                                 <span class="card__tag">Estrelas</span>
                                 <div class="card__info">
