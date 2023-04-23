@@ -1,9 +1,15 @@
-﻿# Django - Criando aplicações em python 
+﻿bb# Django - Criando aplicações em python 
 ![Capa do projeto, com um astronauta no espaço com o texto "Alura Space Django"](https://user-images.githubusercontent.com/87834766/233518757-089582c3-7155-4b9d-809f-773d798d7f9f.png)
 
  ### Templates e Boas Práticas
 ## Alura-Space
 > O Django é uma ótima ferramenta para fazer front-end e back-end trabalharem em sintonia.
+# Arquitetura 
+<small>Separação das responsabilidades das diferentes partes do sistema</small> </br> 
+
+<b>Duas aplicações distintas:</b> </br>
+🪲 Galeria - Inserção de novas fotografias; <br/>
+🪲 Users - Processos relativos aos usuários (cadastro, login e autenticação).
 
 # Ambiente de desenvolvimento
 
