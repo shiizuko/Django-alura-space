@@ -85,6 +85,11 @@ Responsável por realizar a maioria dos comandos que utilizaremos para o desenvo
 ~~~
 python manage.py runserver 
 ~~~
+## Configuração do interpretador no VS Code 
+<small>O python que instalmos na virtualenv</small>
+"CTRL + SHIFT + P" --> Pesquisar "Interpretador" e selecionar <b>python:selecionar interpretador</b> --> <b>Insira o caminho do interpretador</b>  e depois em <b>localizar...</b>.
+Navegando até <mark>alura_space > .venv > Scripts</mark>, selecione o arquivo <code>python.exe</code> e clique em <b>Selecionar interpretador</b>
+
 
 # Idioma Principal e Fuso Horário
 **setup > setting.py** 
@@ -155,6 +160,8 @@ photography.objects.all()
 ~~~
 python manage.py createsuperuser 
 ~~~
+# Autenticação de formulários e alerta
+<b>Funcionalidades de login e de cadastro de novas pessoas com o banco de dados interno do Django, utilizando o <i>users</i> do Django admin. Será aplicado também uma regra de negócio: apenas pessoas cadastradas podem visualizar a galeria da página inicial.</b>
 
 
 # Instrutor
