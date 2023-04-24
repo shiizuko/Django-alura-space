@@ -1,4 +1,5 @@
-﻿bb# Django - Criando aplicações em python 
+
+# Django - Criando aplicações em python 
 ![Capa do projeto, com um astronauta no espaço com o texto "Alura Space Django"](https://user-images.githubusercontent.com/87834766/233518757-089582c3-7155-4b9d-809f-773d798d7f9f.png)
 
  ### Templates e Boas Práticas
