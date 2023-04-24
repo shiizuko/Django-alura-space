@@ -2,7 +2,7 @@ from django import forms
 
 class LoginForms(forms.Form):
     name_login = forms.CharField(
-        label="Login Name",
+        label="Nome",
         max_length=100,
         required=True,
         widget=forms.TextInput(
@@ -13,7 +13,7 @@ class LoginForms(forms.Form):
         ),
         )
     password_login = forms.CharField(
-        label="Password",
+        label="Senha",
         required=True,
         max_length=70,
         widget=forms.PasswordInput(
@@ -23,5 +23,50 @@ class LoginForms(forms.Form):
             },
         )
     )
-   
-    
+class RegisterForm (forms.Form):
+    name_register = forms.CharField(
+        label="Nome",
+        max_length=100,
+        required=True,
+        widget=forms.TextInput(
+            attrs={
+                "class": "form-control",
+                "placeholder": "Ex:. Maria Antonia",
+            }
+        ),
+        )
+    email_register = forms.EmailField(
+        max_length=100,
+        required=True,
+        label="Email",
+        widget=forms.EmailInput(
+            attrs={
+                "class":"form-control",
+                "placeholder":"Ex:. email@email.com",
+                
+            }
+        )
+    )
+    password_1 = forms.CharField(
+        label="Senha",
+        required=True,
+        max_length=70,
+        widget=forms.PasswordInput(
+            attrs={
+                "class":"form-control",
+                "placeholder": "Digite sua senha",
+            },
+        )
+    )
+    password_2 = forms.CharField(
+        label="Confirmação de senha",
+        required=True,
+        max_length=70,
+        widget=forms.PasswordInput(
+            attrs={
+                "class":"form-control",
+                "placeholder": "Digite sua senha novamente",
+            },
+        )
+    )
+
