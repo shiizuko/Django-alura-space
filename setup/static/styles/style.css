@@ -121,6 +121,21 @@ table {
     width: 100%;
 }
 
+
+.alert {
+       
+        padding: 16px;
+        margin: 8px;
+        max-width: 90%;
+        border-radius: 10px;
+}
+
+
+.alert-info {
+    background-color: #b6d4fe;
+    color: #65a4fb;
+    border-color: none;
+}
 .cards__titulo {
     color: #7B78E5;
     font-size: 2rem;
