@@ -1,9 +1,31 @@
 from django.shortcuts import redirect, render
 from users.forms import LoginForms, RegisterForm
 from django.contrib.auth.models import User
+from django.contrib import auth
 
 def login(request):
     form = LoginForms()
+    
+    if request.method == 'POST':
+        form = LoginForms(request.POST)
+        
+        if form.is_valid():
+            name = form['name_login'].value()
+            password = form['password_login'].value()
+            
+        user = auth.authenticate(
+            request,
+            username = name,
+            password = password,
+        )
+        if user is not None:
+            auth.login(request, user)
+            return redirect('index')
+        else:
+            return redirect('login')
+            
+        
+        
     return render(request, 'users/login.html', {'form': form})
 
 def register(request):
@@ -11,7 +33,6 @@ def register(request):
     form  = RegisterForm()
     if request.method == 'POST':
         form = RegisterForm(request.POST)
-        
         
         if form.is_valid():
             if form["password_1"].value() != form["password_2"].value():#verificação das senhas (se são iguais) 
@@ -33,5 +54,6 @@ def register(request):
             )
             user.save()
             return redirect('login')
+        
     return render(request, 'users/register.html', {'form': form})
     
