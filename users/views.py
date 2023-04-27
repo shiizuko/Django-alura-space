@@ -1,7 +1,7 @@
 from django.shortcuts import redirect, render
 from users.forms import LoginForms, RegisterForm
 from django.contrib.auth.models import User
-from django.contrib import auth
+from django.contrib import auth, messages
 
 def login(request):
     form = LoginForms()
@@ -20,8 +20,10 @@ def login(request):
         )
         if user is not None:
             auth.login(request, user)
+            messages.success(request,f'{name} login com sucesso!')
             return redirect('index')
         else:
+            messages.error(request,'error')
             return redirect('login')
             
         
@@ -36,6 +38,7 @@ def register(request):
         
         if form.is_valid():
             if form["password_1"].value() != form["password_2"].value():#verificação das senhas (se são iguais) 
+                messages.error(request, 'as senhas não são iguais')
                 return redirect('register')
             #inserimos as infos recebidas no formulário nas variaveis (name, emai, password), para tornar esses dados mais maleaveis na logica
             name=form["name_register"].value()
@@ -44,6 +47,7 @@ def register(request):
             
             #verificando se a informação do username corresponde a algo já existente no banco de dados
             if User.objects.filter(username=name).exists():
+                messages.error(request, 'user já existente')
                 return redirect('register')
 
             #Criando usuário com as informações inseridas no formulário
@@ -53,6 +57,7 @@ def register(request):
                 password = password
             )
             user.save()
+            messages.success(request, 'cadastro efetuado com sucesso.')
             return redirect('login')
         
     return render(request, 'users/register.html', {'form': form})
