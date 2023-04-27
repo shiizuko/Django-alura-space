@@ -1,12 +1,12 @@
 from django.contrib import admin
 from galeria.models import Photography
 
-class ListeningPhotography(admin.ModelAdmin):
+class ListingPhotography(admin.ModelAdmin):
     list_display = ("id", "name", "legend", "published")
     list_display_links = ("id", "name")
     search_fields = ("name",)
-    list_filter = ("category",)
+    list_filter = ("category", "user",)
     list_per_page = 10
     list_editable = ("published",)
 
-admin.site.register(Photography, ListeningPhotography)
+admin.site.register(Photography, ListingPhotography)
