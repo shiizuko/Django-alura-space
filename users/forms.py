@@ -75,6 +75,16 @@ class RegisterForm (forms.Form):
         if name:
             name = name.strip() # tira os espaços do ínicio e do final da string
             if ' ' in name:
-                raise forms.ValidationError("não é possível inserir espaços dentro do campo nome de usuário")
+                raise forms.ValidationError("Espaços não são permitidos nesse campo.")
             else:
                 return name
+            
+
+    def clean_password_2(self):
+        password_1 = self.cleaned_data.get('password_1')
+        password_2 = self.cleaned_data.get('password_2')
+        if password_1 and password_2:
+            if password_1 != password_2:
+                raise forms.ValidationError("As senhas não são iguais")
+            else:
+                return password_2
