@@ -70,3 +70,11 @@ class RegisterForm (forms.Form):
         )
     )
 
+    def clean_name_register(self):
+        name = self.cleaned_data.get('name_register')
+        if name:
+            name = name.strip() # tira os espaços do ínicio e do final da string
+            if ' ' in name:
+                raise forms.ValidationError("não é possível inserir espaços dentro do campo nome de usuário")
+            else:
+                return name
