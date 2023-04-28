@@ -1,5 +1,5 @@
 
-# Django - Criando aplicações em python 
+# <img src="https://user-images.githubusercontent.com/87834766/235193418-4f243da7-0ff3-463e-b096-b2b5065a1038.svg" widht="30" height="30" /> Django - Criando aplicações em python 
 ![Capa do projeto, com um astronauta no espaço com o texto "Alura Space Django"](https://user-images.githubusercontent.com/87834766/233518757-089582c3-7155-4b9d-809f-773d798d7f9f.png)
 
  ### Templates e Boas Práticas
@@ -15,13 +15,15 @@
 # Ambiente de desenvolvimento
 
 ## IDE
-Vscode
+<img src="https://user-images.githubusercontent.com/87834766/235193658-b384ad55-57d4-4079-9d5a-8eff514401c0.svg" widht="30" height="30" /> Vscode
+
 
 ## Extensões 
 SQlite Viewer - [Florian Klampfer](https://qwtel.com/)
 
 ## Linguagem
-Python **3.10.9**
+<img src="https://user-images.githubusercontent.com/87834766/235193947-7bdec81d-5a8f-47dd-8357-ea90f1b5b353.svg" widht="30" height="30" />  Python **3.10.9**
+
 
 ### Instalação Pip 
 (Sistema Windows)
