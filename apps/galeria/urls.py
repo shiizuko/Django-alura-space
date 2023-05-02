@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path
-from galeria.views import index, imagem, search
+from apps.galeria.views import index, imagem, search
 
 #criando uma lista que possui todos os endpoints da aplicação relacionada a galeria:
 
