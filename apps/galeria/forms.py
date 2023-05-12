@@ -5,7 +5,13 @@ from apps.galeria.models import Photography
 class PhotographyForms(forms.ModelForm):
     class Meta:
         model = Photography
-        exclude = ('published',)
+        exclude = ['published',]
+        labels = {
+            'description': 'Description',
+            'date_picture': 'Registration Date',
+            'user': 'Owner',
+            'name': 'Title',
+        }
         
         widgets = {
             'name': forms.TextInput(attrs={'class': 'form-control'}),
@@ -14,7 +20,7 @@ class PhotographyForms(forms.ModelForm):
             'description': forms.Textarea(attrs={'class': 'form-control'}),
             'picture': forms.FileInput(attrs={'class': 'form-control'}),
             'date_picture': forms.DateInput(
-                formt = '%d/%m/%Y',
+                format = '%d/%m/%Y',
                 attrs={
                     'type': 'date',
                     'class': 'form-control'

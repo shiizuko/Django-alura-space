@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from apps.galeria.models import Photography
+from apps.galeria.forms import PhotographyForms
 from django.contrib import messages
 
 def index(request):
@@ -28,7 +29,19 @@ def search(request):
     return render(request, "galeria/search.html", {"cards": photographys})
 
 def new_image(request):
-    return render(request, 'galeria/new_image.html')
+    
+    if not request.user.is_authenticated:
+        messages.error(request, "You must be logged in")
+        return redirect('login')
+    
+    form = PhotographyForms
+    if request.method == 'POST':
+        form = PhotographyForms(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Image published successfully")
+            return redirect('galeria/index.html')
+    return render(request, 'galeria/new_image.html', {'form': form})
 
 def edit_image(request):
     pass
