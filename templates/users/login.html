@@ -1,17 +1,7 @@
-{% extends 'users/base.html' %}
+{% extends 'shared/base.html' %}
 {% load static %}
 {% block content %}
-    <div class="pagina-inicial">
-  
-        <main class="principal">
-            <section class="menu-lateral">
-                <nav class="menu-lateral__navegacao">
-                    <a href="{% url 'index' %}"><img src="{% static '/assets/ícones/1x/Home - ativo.png' %}"> Home</a>
-                    <a href="{% url 'login' %}"><img src="{% static '/assets/ícones/1x/Mais vistas - inativo.png' %}"> Login</a>
-                    <a href="{% url 'register' %}"><img src="{% static '/assets/ícones/1x/Novas - inativo.png' %}"> Register</a>
-                    <a href="{% url 'logout' %}"><img src="{% static '/assets/ícones/1x/Surpreenda-me - inativo.png' %}"> Logout</a>
-                </nav>
-            </section>
+
             <section class="galeria" style="margin-left: 5em">
               
                 <form action="{% url 'login' %}" method="POST">
@@ -25,7 +15,7 @@
                         {% endfor %}
                     </div>
                     <div>
-                        <button  class="btn btn-light col-12" style="padding: top 5px;" type="submit">log in</button>
+                        <button  class="btn btn-success col-12" style="padding: top 5px;" type="submit">log in</button>
                     </div>
                 </form>
             </section>
@@ -33,5 +23,4 @@
     </div>
 
 
-{% include 'partials/_footer.html' %}
 {% endblock %}
