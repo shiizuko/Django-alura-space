@@ -26,3 +26,12 @@ def search(request):
         if search_name:
             photographys = photographys.filter(name__icontains=search_name)
     return render(request, "galeria/search.html", {"cards": photographys})
+
+def new_image(request):
+    return render(request, 'galeria/new_image.html')
+
+def edit_image(request):
+    pass
+
+def delete_image(request):
+    pass
