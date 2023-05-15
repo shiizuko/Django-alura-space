@@ -43,8 +43,16 @@ def new_image(request):
             return redirect('index')
     return render(request, 'galeria/new_image.html', {'form': form})
 
-def edit_image(request):
-    pass
+def edit_image(request, picture_id):
+    photography = Photography.objects.get(id=picture_id)
+    form = PhotographyForms(instance=photography)
+    if request.method == 'POST':
+        form = PhotographyForms(request.POST, request.FILES, instance=photography)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Image updated successfully ")
+            return redirect('index')
+    return render(request, 'galeria/edit_image.html', { 'form': form, 'picture_id': picture_id})
 
 def delete_image(request):
     pass

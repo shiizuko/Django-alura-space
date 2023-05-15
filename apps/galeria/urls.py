@@ -9,20 +9,26 @@ urlpatterns = [
     path('', 
          index,
          name='index'),
+    
     path('imagem/<int:picture_id>',
           imagem, 
           name='imagem'),
+    
     path('admin/',
          admin.site.urls),
+    
     path('search',
          search,
          name='search'),
+    
      path('new-image',
          new_image,
          name='new_image'),
-     path('edit-image',
+     
+     path('edit-image/<int:picture_id>',
          edit_image,
          name='edit_image'),
+     
      path('delete-image',
          delete_image,
          name='delete_image'),
