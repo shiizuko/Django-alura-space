@@ -29,7 +29,7 @@ urlpatterns = [
          edit_image,
          name='edit_image'),
      
-     path('delete-image',
+     path('delete-image/<int:picture_id>',
          delete_image,
          name='delete_image'),
 ]
