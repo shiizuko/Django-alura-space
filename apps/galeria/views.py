@@ -36,11 +36,11 @@ def new_image(request):
     
     form = PhotographyForms
     if request.method == 'POST':
-        form = PhotographyForms(request.POST)
+        form = PhotographyForms(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             messages.success(request, "Image published successfully")
-            return redirect('galeria/index.html')
+            return redirect('index')
     return render(request, 'galeria/new_image.html', {'form': form})
 
 def edit_image(request):
